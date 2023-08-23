@@ -48,6 +48,8 @@
     <script src="/js/md_nb.js"></script>
     <script src="/js/yes.js"></script>
     
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
 </head><body style="font-family: ,'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;">
         <div class="loading">
             <div class="loading-bg"></div>
@@ -69,7 +71,7 @@
                     <div class="menu-item">
                         <div class="hengtiao-root">
                             <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-home'></i> Home</div>
+                            <div class="name text-wbd-reverse"><i class='fa fa-home'></i> 首页</div>
                         </div>
                     </div>
                 </a>
@@ -78,7 +80,7 @@
                     <div class="menu-item">
                         <div class="hengtiao-root">
                             <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-book'></i> Posts</div>
+                            <div class="name text-wbd-reverse"><i class='fa fa-book'></i> 文章</div>
                         </div>
                     </div>
                 </a>
@@ -87,7 +89,7 @@
                     <div class="menu-item">
                         <div class="hengtiao-root">
                             <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-folder-open'></i> Categories</div>
+                            <div class="name text-wbd-reverse"><i class='fa fa-folder-open'></i> 分类</div>
                         </div>
                     </div>
                 </a>
@@ -96,16 +98,7 @@
                     <div class="menu-item">
                         <div class="hengtiao-root">
                             <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-tags'></i> Tags</div>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="/about">
-                    <div class="menu-item">
-                        <div class="hengtiao-root">
-                            <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-info-circle'></i> About</div>
+                            <div class="name text-wbd-reverse"><i class='fa fa-tags'></i> 标签</div>
                         </div>
                     </div>
                 </a>
@@ -123,31 +116,25 @@
         
         <a href="/">
             <div class="burger-item">
-                <i class='fa fa-home'></i> Home
+                <i class='fa fa-home'></i> 首页
             </div>
         </a>
         
         <a href="/posts">
             <div class="burger-item">
-                <i class='fa fa-book'></i> Posts
+                <i class='fa fa-book'></i> 文章
             </div>
         </a>
         
         <a href="/categories">
             <div class="burger-item">
-                <i class='fa fa-folder-open'></i> Categories
+                <i class='fa fa-folder-open'></i> 分类
             </div>
         </a>
         
         <a href="/tags">
             <div class="burger-item">
-                <i class='fa fa-tags'></i> Tags
-            </div>
-        </a>
-        
-        <a href="/about">
-            <div class="burger-item">
-                <i class='fa fa-info-circle'></i> About
+                <i class='fa fa-tags'></i> 标签
             </div>
         </a>
         
@@ -180,10 +167,10 @@
                     
                     
                     
-                        <div class="hometitle" style="font-size: 40px; margin-bottom: 20px;">KyanRay</div>
+                        <div class="hometitle" style="font-size: 40px; margin-bottom: 20px;">雪 帛 原</div>
                     
                     
-                        <div class="homecontent" style="font-size: 20px;">Be Water, My Friend</div>
+                        <div class="homecontent" style="font-size: 20px;">Crazy Plante</div>
                     
                 <button class="todown" type="button">
                     <i class="fa fa-angle-down fa-3x"></i>
@@ -201,7 +188,7 @@
                 <div class="zuixin">
                     <div class="xian-l"></div>
                     <h3>
-                        
+                        Latest Posts
                     </h3>
                     <div class="xian-r"></div>
                 </div>
@@ -211,7 +198,7 @@
                 <div class="more-posts">
                     <a href=' 
                             /posts
-                            ' class="efct-button"></a>
+                            ' class="efct-button">All Posts</a>
                 </div>
             </div>
         </div>
@@ -221,6 +208,23 @@
         </div>
 
         <footer class="footer">
+    
+        <div class="container">
+            <div class="footer-items">
+                
+                    <div class="footer-item">
+                        <i class="fa fa-user"></i> <span id="busuanzi_value_site_pv"></span> |
+                        <i class="fa fa-eye"></i> <span id="busuanzi_value_site_uv"></span>
+                    </div>
+                
+                
+                
+                    <div class="footer-item">
+                        Theme by <a href="https://github.com/xioyito/NewBee">NewBee</a> | Powered by <a href="https://gohugo.io/">Hugo</a>
+                    </div>
+                
+            </div>
+        </div>
     
 
     
@@ -233,11 +237,11 @@
     <div class="search">
         <div class="sheader anniu">
             <div class="sh-l">
-                <input type="text" placeholder='' id="search-key">
+                <input type="text" placeholder='Enter a KeyWord' id="search-key">
                 <span class="sclear"><i class="fa fa-close"></i></span>
             </div>
             <div class="sh-r">
-                <button></button>
+                <button>search</button>
             </div>
         </div>
         <div class="sbody">
@@ -262,11 +266,11 @@
     var mode_custom = "light";
     var postsCount =  0 ;
     var arrPosts = [];
-    var search_theEnd = "";
-    var search_nothing = "";
-    var search_found = "";
-    var search_result = "";
-    var search_results = "";
+    var search_theEnd = "The End";
+    var search_nothing = "Nothing was found";
+    var search_found = "Found";
+    var search_result = "result";
+    var search_results = "results";
     var enable_mermaid =  null 
 </script>
 
